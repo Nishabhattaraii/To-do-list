@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+    {% load static %} <!-- Load the static template tag library -->
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+</head>
+<body>
+    <h2>To-Do List</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="task" placeholder="Enter a task">
+        <button type="submit">Add</button>
+    </form>
+    <!-- To-Do list items will be displayed here -->
+</body>
+</html>
